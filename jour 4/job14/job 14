@@ -1,0 +1,21 @@
+def my_long_words(n, phrase):
+    # Séparer la phrase en mots en utilisant l'espace comme séparateur
+    mots = phrase.split(" ")
+    # Créer une liste vide pour stocker les mots plus longs que n
+    mots_plus_longs = []
+    # Parcourir chaque mot dans la liste de mots
+    for mot in mots:
+        # Vérifier si la longueur du mot est supérieure à n
+        if len(mot) > n:
+            # Ajouter le mot à la liste des mots plus longs
+            mots_plus_longs.append(mot)
+    # Convertir la liste des mots plus longs en une chaîne de caractères
+    resultat = " ".join(mots_plus_longs)
+    # Retourner la chaîne de caractères résultante
+    return resultat
+
+# Exemple d'utilisation de la fonction
+phrase = "La peur est le chemin vers le côté obscur la peur mène à la colère la colère mène à la haine la haine mène à la souffrance"
+n = 3
+resultat = my_long_words(n, phrase)
+print("Output:", resultat)

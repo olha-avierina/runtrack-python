@@ -1,0 +1,8 @@
+def tri_croissant(liste):
+    liste.sort()
+    return liste
+
+# Exemple d'utilisation
+ma_liste = [11, 3, 18, 6, 2, 9]
+liste_triee = tri_croissant(ma_liste)
+print("Liste triée :", liste_triee)
